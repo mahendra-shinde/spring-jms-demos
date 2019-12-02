@@ -31,8 +31,8 @@ public class JmsDemo2Application implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		FundTransfer tr = new FundTransfer("SB10293", "XYZ Bank", "12399033", 23000.0);
-		template.convertAndSend("sample.queue",tr);
+		FundTransfer tr = new FundTransfer("SB10294", "PQR Bank", "12399133", 21000.0);
+		template.convertAndSend("sample",tr);
 		System.out.println("Message sent !");
 	}
 

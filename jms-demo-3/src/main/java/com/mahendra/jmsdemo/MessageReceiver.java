@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MessageReceiver {
 
-	@JmsListener(destination="sample.queue")
+	@JmsListener(destination="sample")
 	public void receive(FundTransfer message) {
 		System.out.print("DateTime: "+LocalDate.now());
 		System.out.println(" Got new message: "+message.getFromBank());
